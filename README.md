@@ -4,7 +4,7 @@ k-vim
 
 > VERSION: 9.2
 
-> LAST_UPDATE_TIME: 2017-07-29
+> LAST_UPDATE_TIME: 2019-10-13
 
 > 本次更新: 小版本更新, 支持vim8异步语法检查
 
@@ -39,6 +39,8 @@ molokai主题
 # 安装步骤
 
 ### 1. clone 到本地
+vim --version   #查看vim版本是否支持python3
+sudo apt install vim-nox  #支持python3版本
 
 ```
 sudo apt install git #安装git命令
