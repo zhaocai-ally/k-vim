@@ -41,7 +41,17 @@ molokai主题
 ### 1. clone 到本地
 
 ```
-git clone https://github.com/wklken/k-vim.git
+sudo apt install git #安装git命令
+
+git克隆慢的解决办法
+nslookup github.global.ssl.fastly.Net   #ip域名写进下面hosts文件
+nslookup github.com   #ip域名写进下面hosts文件
+sudo gedit /etc/hosts   #修改hosts文件
+0.0.0.0 http://global-ssl.fastly.net   #将上面查出的ip域名写在这里
+0.0.0.0 http://github.com   #将上面查出的ip域名写在这里
+sudo /etc/init.d/networking restart   #执行生效
+
+git clone https://github.com/zhaocai-ally/k-vim.git #克隆到本地
 ```
 
 
@@ -71,7 +81,10 @@ brew install the_silver_searcher
 ##### 2.2 使用Python
 
 ```
-sudo pip install flake8 yapf
+sudo apt install python3-pip #安装pip
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U #使用国内源更新pip
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple #修改pip为国内源
+sudo pip install flake8 yapf #安装缺少包
 ```
 
 ##### 2.3 如果使用Javascript(不需要的跳过)
@@ -82,6 +95,7 @@ sudo pip install flake8 yapf
 
 # ubuntu
 sudo apt-get install nodejs npm
+npm config set registry https://registry.npm.taobao.org #设置npm软件源为国内源
 sudo npm install -g jslint
 sudo npm install jshint -g
 sudo npm install -g eslint eslint-plugin-standard eslint-plugin-promise eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-html babel-eslint
@@ -337,6 +351,6 @@ Github: https://github.com/wklken
 
 Blog: [http://www.wklken.me](http://www.wklken.me)
 
-2013-06-11 于深圳
+
 
 
